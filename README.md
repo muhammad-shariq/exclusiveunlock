@@ -51,3 +51,19 @@ http://localhost:8000/
 U: `demo@demo.com`
 
 P: `demo1234`
+
+## Issues
+
+If you come across any issues please [report them here](https://github.com/muhammad-shariq/exclusiveunlock/issues).
+
+## Contributing
+
+Thank you for considering contributing to the Exclusiveunlock project! Please feel free to make any pull requests, or e-mail me a feature request you would like to see in the future to Muhammad Shariq at shariq@ibussolutions.com.
+
+## Security Vulnerabilities
+
+If you discover a security vulnerability within this project, please send an e-mail to Muhammad Shariq at shariq@ibussolutions.com, or create a pull request if possible. All security vulnerabilities will be promptly addressed.
+
+## License
+
+MIT: [http://anthony.mit-license.org](http://anthony.mit-license.org)
