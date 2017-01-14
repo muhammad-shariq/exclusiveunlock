@@ -1,0 +1,104 @@
+@import "icons.css";
+@import "bootstrap.css";
+@import "bootstrap-responsive.css";
+@import "fullcalendar.css";
+@import "ui.css";
+@import "select2.css";
+@import "uniform.default.css";
+@import "validation.css";
+@import "mCustomScrollbar.css";
+@import "cleditor.css";
+@import "fancybox/jquery.fancybox.css";
+@import "../js/plugins/plupload/jquery.plupload.queue/css/jquery.plupload.queue.css";
+@import "elfinder.min.css";
+@import "elfinder.css";
+@import "multi-select.css";
+@import "pnotify.css";
+@import "ibutton.css";
+@import "login.css";
+@import "stepy.css";
+@import "tagsinput.css";
+@import "stylesheet.css";
+@import "styling.css";
+
+
+html { height: 100%; }
+body { min-height: 100%; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 22px; position: relative; background: url("../img/backgrounds/body.jpg") left top repeat;}
+
+
+
+@media only screen and (max-width: 1350px) {
+    body .wrapper .menu{display: block;}
+}
+
+@media only screen and (max-width: 1024px) {
+    body .wrapper .menu{display: block;}    
+}
+
+@media (max-width: 979px) {
+    
+    .navbar .nav > .active > a, .navbar .nav > .active > a:hover, 
+    .navbar .nav > .active > a:focus, .navbar .nav li.dropdown.open > .dropdown-toggle, 
+    .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle{
+        background: none;
+        color: #333;    
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .navbar .nav > li > a, .navbar .nav > li > a:focus, .navbar .nav > li > a:hover{color: #333; text-shadow: none; background: none;}
+    .navbar .nav li.dropdown > .dropdown-toggle .caret, 
+    .navbar .nav li.dropdown.open > .dropdown-toggle .caret, 
+    .navbar .nav li.dropdown.active > .dropdown-toggle .caret, 
+    .navbar .nav li.dropdown.open.active > .dropdown-toggle .caret{border-top-color: #333; border-bottom-color: #333;}    
+    
+    .dropdown-menu li > a:hover, .dropdown-menu li > a:focus, .dropdown-submenu:hover > a{background: none; color: #777777;}
+    
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    body .wrapper .menu {display: none; position: absolute; left: 50%; margin-top: 0px; margin-left: -110px !important; top: 15px; z-index: 2000; height: auto; min-height: auto;}
+    body .wrapper .menu .breadLine .arrow {display: block;}
+    body .wrapper .content{margin-left: 0px;}
+        .header .header_menu li.list_icon{display: block;}
+}
+
+@media only screen and (min-width: 481px) {
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .wBlock.auto{width: auto; float: left;}
+        .wBlock.auto .dSpace{padding: 3px;}
+    .wBlock .dSpace{width: 100%; padding: 3px 0px;}
+    .wBlock .rSpace{float: left; width: 100%;}
+}
+
+@media only screen and (min-width: 769px) {
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 980px) {
+    body .wrapper .menu {display: none; position: absolute; left: 50%; margin-top: 0px; margin-left: -110px !important; top: 15px;  z-index: 2000; height: auto; min-height: auto;}
+    body .wrapper .menu .breadLine .arrow {display: block;}
+    body .wrapper .content{margin-left: 0px;}
+        .header .header_menu li.list_icon{display: block;}        
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    body .wrapper .menu {display: none; position: absolute; left: 50%; margin-top: 0px; margin-left: -110px !important; top: 15px; z-index: 2000; height: auto; min-height: auto;}
+    body .wrapper .menu .breadLine .arrow {display: block;}
+    body .wrapper .content{margin-left: 0px;}
+        .header .header_menu li.list_icon{display: block;}        
+        
+    .block, .block-fluid{overflow: hidden; overflow-x: auto;}
+}
+
+@media only screen and (max-width: 319px) {
+    body .wrapper .menu {display: none; position: absolute; left: 50%; margin-top: 0px; margin-left: -110px !important; top: 15px; z-index: 2000; height: auto; min-height: auto;}
+    body .wrapper .menu .breadLine .arrow {display: block;}
+    body .wrapper .content{margin-left: 0px;}
+        .header .header_menu li.list_icon{display: block;}    
+    
+    .block, .block-fluid{overflow: hidden; overflow-x: auto;}
+}

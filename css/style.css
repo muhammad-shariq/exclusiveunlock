@@ -1,0 +1,70 @@
+body.index-page{background-color:#222222;}
+header{background-color:#ffac40;}
+h1{display:block; width:270px; margin:0 auto; overflow:hidden}
+h1 a.logo{display:block; width:250px; height:100px; background:url(../img/logo.png) no-repeat center; margin:10px}
+h1.home-logo{margin:20px auto}
+
+.home-login-form{width: 570px; min-height:510px; display:block; position:relative; margin: auto; background:rgba(9,9,9,.6); padding:50px}
+.home-login{background:url(../img/bg-image.png) left center no-repeat}
+.home-footer{background-color:#ffac40; min-height:100px; display:block; width:100%}
+.home-login-form .form-control{border-radius:0; -moz-border-radius:0; -ms-border-radius:0; -o-border-radius:0; -webkit-border-radius:0; padding:17px; line-height:30px; border:#ffac40 1px solid; height:auto}
+.home-login-form label{color:#d77a00; font-size:16px}
+.home-login-form .btn{border-radius:0; -moz-border-radius:0; -ms-border-radius:0; -o-border-radius:0; -webkit-border-radius:0; padding:10px 	40px; background-color:#d77a00}
+h2{color:#d77a00;}
+.welcome-bar{background-color:#222222; color:#FFF; padding:5px;}
+.welcome-bar ul{list-style:none; margin: 0; padding:0;}
+.welcome-bar li{float:left; display:block; padding:10px;}
+.welcome-bar li a{color: #ffac40;}
+
+.search-box{width:auto; background-color:#fff; padding:0px;}
+
+.search-box input[type="submit"] {background:url(../img/search-icon.png) no-repeat center #ffac40; border:none; height:35px; width:35px; }
+.search-box input[type="text"] {width:140px; height:35px; border:none; margin:0; color:#000; padding:10px; transition:all 0.25s ease 0s;}
+.search-box input[type="text"]:focus {width:220px;}
+.breadcrum-head{padding:15px; background-color:#f2eee8; margin-bottom:20px;	}
+.breadcrum-head a.text-right{display:block}
+.dashboard{display:block; background-color:#f2eee8; padding:10px; margin-bottom:20px;}
+.user-image{display:block; width:100%; border:#222 solid 1px}
+.user-image img{width:100%;}
+.user-info{}
+.user-info ul{margin:0; padding:0}
+.user-info li{list-style:none; padding:10px 5px}
+.user-info li i{margin-right:10px;}
+.user-info li.name span{font-size:20px}
+.circles{}
+.circles canvas{margin:10px 20px;}
+.knob{width:170px; margin:10px 20px; position:absolute; top:80px;}
+.circles span{width:170px; margin:10px 20px; position:absolute; top:50px; text-align:center; font-size:18px; color:#222}
+
+.status{widows:100%; padding:15px; background-color:#ffac40; display:block; overflow:hidden}
+.status ul{padding:0; margin:0;}
+.status ul li{padding:0px 20px;font-size:16px; margin:0; border-right:1px solid #222; display:block; float:left; color:#000; line-height:16px;}
+.status ul li span{font-weight:bold;}
+
+.order-history .nav-tabs > li > a{font-weight:bold; font-size:16px; color:#000; background:none; border:none; border-radius:0}
+.order-history .nav-tabs > li.active > a, .order-history .nav-tabs > li.active > a:hover, .order-history .nav-tabs > li > a:hover, .order-history .nav-tabs > li.active > a:focus,.order-history .nav-tabs > li > a:focus{ background:none; border:none; border-radius:0 }
+
+.order-history .nav-tabs {margin-top:20px;}
+.order-history .nav-tabs > li {background-color:#ffac40; margin-right:2px; width:260px;}
+.order-history .nav-tabs > li.active{background-color:#d77a00}
+.order-history .nav-tabs > li.active a, .order-history .nav-tabs > li.active a:hover,.order-history .nav-tabs > li.active a:focus{color:#fff}
+.order-history .tab-content{padding:10px; background-color:#FFF; border-top:8px solid #d77a00 }
+.nav-bottom{margin-top:80px; border-top: 1px solid #fff; border-bottom: 1px solid #fff; padding:10px; overflow:hidden}
+.nav-bottom ul {padding:0px; margin:0px auto; width:80%;}
+.nav-bottom ul li {list-style:none; float:left; display:block; padding:0 15px; border-right:1px solid #fff}
+.nav-bottom ul li:last-child{border:none}
+.nav-bottom ul li a{color:#fff}
+.nav-bottom ul li a:hover{text-decoration:none;}
+
+footer{background-color:#222; color:#FFF;}
+footer h3{border-bottom:2px solid #ffac40; padding-bottom:10px; margin-bottom:20px;}
+footer p {margin-bottom:20px; border-bottom:2px solid #000; padding-bottom:10px}
+footer p span{display:block; margin-top:10px;}
+
+footer .short-links {margin:0; padding:0; list-style:none;}
+footer .short-links li {padding:7px 0}
+footer .short-links li a{color:#FFF;}
+footer .short-links li a span{margin-right:15px;}
+footer .f-logo{margin-top:100px; display:block; width:100%}
+
+.footer-instruction p{border-bottom:0}

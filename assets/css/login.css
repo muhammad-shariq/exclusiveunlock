@@ -1,0 +1,33 @@
+.loginBox{width: 320px; position: absolute; left: 50%; top: 50%; margin-top: -212px; margin-left: -160px;}    
+
+    .bLogo{width: 320px; height: 110px; background: url("../img/b_logo.png") top center no-repeat transparent; margin-bottom: 10px;}
+    .loginForm{background: #F9F9F9; border: 1px solid #CCC; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;
+              -webkit-box-shadow: 0px 1px 6px rgba(67, 101, 139, 0.35); -moz-box-shadow: 0px 1px 6px rgba(67, 101, 139, 0.35); box-shadow: 0px 1px 6px rgba(67, 101, 139, 0.35);}
+    .loginForm .form-horizontal{padding: 20px 10px 0px;}
+    
+        .loginForm label.checkbox{margin-left: 0px; padding: 0px; cursor: pointer; font-size: 11px;}
+        .loginForm label.checkbox .checker{margin-top: -3px;}
+        .loginForm label.checkbox .checker input[type="checkbox"]{margin-left: 0px;}
+        .loginForm input[type="text"], .loginBox input[type="password"]{width: 256px;}
+         
+    .loginForm .white{background-color: #FFF; -moz-border-top-right-radius: 5px; -webkit-border-top-right-radius: 5px; border-top-right-radius: 5px; border-top: 1px solid #E8E8E8; border-right: 1px solid #E8E8E8;}
+        .loginForm .white p{margin: 0px 10px; line-height: 30px; font-size: 11px; color: #888;}
+        
+    .loginForm .change{background-color: #FFF; -moz-border-top-left-radius: 5px; -webkit-border-top-left-radius: 5px; border-top-left-radius: 5px;  border-top: 1px solid #E8E8E8; border-left: 1px solid #E8E8E8;}
+        .loginForm .change p{margin: 0px 10px; line-height: 30px; text-align: center;}
+            .loginForm .change p a{color: #888; font-weight: bold; text-decoration: none;}
+                .loginForm .change p a:hover{color: #444;}
+        
+.loginBlock{width: 300px; position: absolute; left: 50%; top: 100px; margin-left: -160px; border: 10px solid #FFF; display: none; 
+            -webkit-box-shadow: 2px 2px 4px rgba(0,0,0,0.1); -moz-box-shadow:  2px 2px 4px rgba(0,0,0,0.1); box-shadow:  2px 2px 4px rgba(0,0,0,0.1);
+            -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px;}
+    .loginBlock p{color: #666;}
+    .loginBlock h1{font-size: 18px; color: #507399; background: #F9F9F9; margin: 0px; line-height: 18px; padding: 10px; text-shadow: 1px 2px 0px #FFF;}
+    .loginBlock .dr{margin-bottom: 0px; background-color: #F9f9f9;}
+    .loginBlock .form-horizontal{padding: 10px 10px 0px;}
+        .loginBlock .form-horizontal .dr{margin-bottom: 10px;}
+    .loginBlock .control-group{margin-bottom: 10px;}
+    .loginBlock .loginForm{-moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px;
+                           -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; border: 0px;}
+        .loginBlock .loginForm input[type="text"], .loginBlock .loginForm input[type="password"]{width: 238px;}
+    .loginBlock .controls{padding: 0px 10px 0px;}

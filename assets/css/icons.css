@@ -1,0 +1,225 @@
+/* Small icons*/
+[class*="isw-"],[class*="isb-"]{ margin-left: 10px; padding: 11px 0px; width: 16px; height: 16px; font-size: 14px; font-weight: normal; display: block; float: left;}
+[class*="block"] [class*="isw-"], [class*="block"] [class*="isb-"] { display: inline-block; padding: 1px 0px 0px; margin-right: 5px; margin-left: 0px; line-height: 22px;}
+
+    /* icon small white */
+    .isw-archive{background: url('../img/icons/ws/ic_archive.png') center center no-repeat transparent;}
+    .isw-attachment{background: url('../img/icons/ws/ic_attachment.png') center center no-repeat transparent;}
+    .isw-bookmark{background: url('../img/icons/ws/ic_bookmark.png') center center no-repeat transparent;}
+    .isw-brush{background: url('../img/icons/ws/ic_brush.png') center center no-repeat transparent;}
+    .isw-calc{background: url('../img/icons/ws/ic_calc.png') center center no-repeat transparent;}
+    .isw-calendar{background: url('../img/icons/ws/ic_calendar.png') center center no-repeat transparent;}
+    .isw-cancel{background: url('../img/icons/ws/ic_cancel.png') center center no-repeat transparent;}
+    .isw-chat{background: url('../img/icons/ws/ic_chat.png') center center no-repeat transparent;}
+    .isw-chats{background: url('../img/icons/ws/ic_chats.png') center center no-repeat transparent;}
+    .isw-cloud{background: url('../img/icons/ws/ic_cloud.png') center center no-repeat transparent;}
+    .isw-delete{background: url('../img/icons/ws/ic_delete.png') center center no-repeat transparent;}
+    .isw-documents{background: url('../img/icons/ws/ic_documents.png') center center no-repeat transparent;}
+    .isw-down{background: url('../img/icons/ws/ic_down.png') center center no-repeat transparent;}
+    .isw-donw_circle{background: url('../img/icons/ws/ic_down_circle.png') center center no-repeat transparent;}
+    .isw-download{background: url('../img/icons/ws/ic_download.png') center center no-repeat transparent;}
+    .isw-edit{background: url('../img/icons/ws/ic_edit.png') center center no-repeat transparent;}
+    .isw-empty_document{background: url('../img/icons/ws/ic_empty_document.png') center center no-repeat transparent;}
+    .isw-favorite{background: url('../img/icons/ws/ic_favorite.png') center center no-repeat transparent;}
+    .isw-folder{background: url('../img/icons/ws/ic_folder.png') center center no-repeat transparent;}
+    .isw-fullscreen{background: url('../img/icons/ws/ic_fullscreen.png') center center no-repeat transparent;}
+    .isw-graph{background: url('../img/icons/ws/ic_graph.png') center center no-repeat transparent;}
+    .isw-grid{background: url('../img/icons/ws/ic_grid.png') center center no-repeat transparent;}
+    .isw-left{background: url('../img/icons/ws/ic_left.png') center center no-repeat transparent;}
+    .isw-left_circle{background: url('../img/icons/ws/ic_left_circle.png') center center no-repeat transparent;}
+    .isw-list{background: url('../img/icons/ws/ic_list.png') center center no-repeat transparent;}
+    .isw-lock{background: url('../img/icons/ws/ic_lock.png') center center no-repeat transparent;}
+    .isw-mail{background: url('../img/icons/ws/ic_mail.png') center center no-repeat transparent;}
+    .isw-minus{background: url('../img/icons/ws/ic_minus.png') center center no-repeat transparent;}
+    .isw-ok{background: url('../img/icons/ws/ic_ok.png') center center no-repeat transparent;}
+    .isw-picture{background: url('../img/icons/ws/ic_picture.png') center center no-repeat transparent;}
+    .isw-pin{background: url('../img/icons/ws/ic_pin.png') center center no-repeat transparent;}
+    .isw-plus{background: url('../img/icons/ws/ic_plus.png') center center no-repeat transparent;}
+    .isw-power{background: url('../img/icons/ws/ic_power.png') center center no-repeat transparent;}
+    .isw-print{background: url('../img/icons/ws/ic_print.png') center center no-repeat transparent;}
+    .isw-refresh{background: url('../img/icons/ws/ic_refresh.png') center center no-repeat transparent;}
+    .isw-right{background: url('../img/icons/ws/ic_right.png') center center no-repeat transparent;}
+    .isw-right_circle{background: url('../img/icons/ws/ic_right_circle.png') center center no-repeat transparent;}
+    .isw-settings{background: url('../img/icons/ws/ic_settings.png') center center no-repeat transparent;}
+    .isw-sound{background: url('../img/icons/ws/ic_sound.png') center center no-repeat transparent;}
+    .isw-sync{background: url('../img/icons/ws/ic_sync.png') center center no-repeat transparent;}
+    .isw-tag{background: url('../img/icons/ws/ic_tag.png') center center no-repeat transparent;}
+    .isw-target{background: url('../img/icons/ws/ic_target.png') center center no-repeat transparent;}
+    .isw-text_document{background: url('../img/icons/ws/ic_text_document.png') center center no-repeat transparent;}
+    .isw-time{background: url('../img/icons/ws/ic_time.png') center center no-repeat transparent;}
+    .isw-unlock{background: url('../img/icons/ws/ic_unlock.png') center center no-repeat transparent;}
+    .isw-up{background: url('../img/icons/ws/ic_up.png') center center no-repeat transparent;}
+    .isw-up_circle{background: url('../img/icons/ws/ic_up_circle.png') center center no-repeat transparent;}
+    .isw-user{background: url('../img/icons/ws/ic_user.png') center center no-repeat transparent;}
+    .isw-users{background: url('../img/icons/ws/ic_users.png') center center no-repeat transparent;}
+    .isw-zoom{background: url('../img/icons/ws/ic_zoom.png') center center no-repeat transparent;}
+    /* eof icon small whit */
+
+    /* icon small black */
+    .isb-archive{background: url('../img/icons/bs/ic_archive.png') center center no-repeat transparent;}
+    .isb-attachment{background: url('../img/icons/bs/ic_attachment.png') center center no-repeat transparent;}
+    .isb-bookmark{background: url('../img/icons/bs/ic_bookmark.png') center center no-repeat transparent;}
+    .isb-brush{background: url('../img/icons/bs/ic_brush.png') center center no-repeat transparent;}
+    .isb-calc{background: url('../img/icons/bs/ic_calc.png') center center no-repeat transparent;}
+    .isb-calendar{background: url('../img/icons/bs/ic_calendar.png') center center no-repeat transparent;}
+    .isb-cancel{background: url('../img/icons/bs/ic_cancel.png') center center no-repeat transparent;}
+    .isb-chat{background: url('../img/icons/bs/ic_chat.png') center center no-repeat transparent;}
+    .isb-chats{background: url('../img/icons/bs/ic_chats.png') center center no-repeat transparent;}
+    .isb-cloud{background: url('../img/icons/bs/ic_cloud.png') center center no-repeat transparent;}
+    .isb-delete{background: url('../img/icons/bs/ic_delete.png') center center no-repeat transparent;}
+    .isb-documents{background: url('../img/icons/bs/ic_documents.png') center center no-repeat transparent;}
+    .isb-down{background: url('../img/icons/bs/ic_down.png') center center no-repeat transparent;}
+    .isb-donw_circle{background: url('../img/icons/bs/ic_down_circle.png') center center no-repeat transparent;}
+    .isb-download{background: url('../img/icons/bs/ic_download.png') center center no-repeat transparent;}
+    .isb-edit{background: url('../img/icons/bs/ic_edit.png') center center no-repeat transparent;}
+    .isb-empty_document{background: url('../img/icons/bs/ic_empty_document.png') center center no-repeat transparent;}
+    .isb-favorite{background: url('../img/icons/bs/ic_favorite.png') center center no-repeat transparent;}
+    .isb-folder{background: url('../img/icons/bs/ic_folder.png') center center no-repeat transparent;}
+    .isb-fullscreen{background: url('../img/icons/bs/ic_fullscreen.png') center center no-repeat transparent;}
+    .isb-graph{background: url('../img/icons/bs/ic_graph.png') center center no-repeat transparent;}
+    .isb-grid{background: url('../img/icons/bs/ic_grid.png') center center no-repeat transparent;}
+    .isb-left{background: url('../img/icons/bs/ic_left.png') center center no-repeat transparent;}
+    .isb-left_circle{background: url('../img/icons/bs/ic_left_circle.png') center center no-repeat transparent;}
+    .isb-list{background: url('../img/icons/bs/ic_list.png') center center no-repeat transparent;}
+    .isb-lock{background: url('../img/icons/bs/ic_lock.png') center center no-repeat transparent;}
+    .isb-mail{background: url('../img/icons/bs/ic_mail.png') center center no-repeat transparent;}
+    .isb-minus{background: url('../img/icons/bs/ic_minus.png') center center no-repeat transparent;}
+    .isb-ok{background: url('../img/icons/bs/ic_ok.png') center center no-repeat transparent;}
+    .isb-picture{background: url('../img/icons/bs/ic_picture.png') center center no-repeat transparent;}
+    .isb-pin{background: url('../img/icons/bs/ic_pin.png') center center no-repeat transparent;}
+    .isb-plus{background: url('../img/icons/bs/ic_plus.png') center center no-repeat transparent;}
+    .isb-power{background: url('../img/icons/bs/ic_power.png') center center no-repeat transparent;}
+    .isb-print{background: url('../img/icons/bs/ic_print.png') center center no-repeat transparent;}
+    .isb-refresh{background: url('../img/icons/bs/ic_refresh.png') center center no-repeat transparent;}
+    .isb-right{background: url('../img/icons/bs/ic_right.png') center center no-repeat transparent;}
+    .isb-right_circle{background: url('../img/icons/bs/ic_right_circle.png') center center no-repeat transparent;}
+    .isb-settings{background: url('../img/icons/bs/ic_settings.png') center center no-repeat transparent;}
+    .isb-sound{background: url('../img/icons/bs/ic_sound.png') center center no-repeat transparent;}
+    .isb-sync{background: url('../img/icons/bs/ic_sync.png') center center no-repeat transparent;}
+    .isb-tag{background: url('../img/icons/bs/ic_tag.png') center center no-repeat transparent;}
+    .isb-target{background: url('../img/icons/bs/ic_target.png') center center no-repeat transparent;}
+    .isb-text_document{background: url('../img/icons/bs/ic_text_document.png') center center no-repeat transparent;}
+    .isb-time{background: url('../img/icons/bs/ic_time.png') center center no-repeat transparent;}
+    .isb-unlock{background: url('../img/icons/bs/ic_unlock.png') center center no-repeat transparent;}
+    .isb-up{background: url('../img/icons/bs/ic_up.png') center center no-repeat transparent;}
+    .isb-up_circle{background: url('../img/icons/bs/ic_up_circle.png') center center no-repeat transparent;}
+    .isb-user{background: url('../img/icons/bs/ic_user.png') center center no-repeat transparent;}
+    .isb-users{background: url('../img/icons/bs/ic_users.png') center center no-repeat transparent;}
+    .isb-zoom{background: url('../img/icons/bs/ic_zoom.png') center center no-repeat transparent;}
+    /* eof icon small black */
+
+
+/* eof small icons */
+
+/* big icons */
+[class*="ibw-"],[class*="ibb-"]{ width: 32px; height: 32px; float: left; display: block; font-size: 24px; font-weight: normal;}
+[class*="block"] [class*="ibw-"], [class*="block"] [class*="ibb-"] { display: inline-block; padding: 1px 0px 0px; margin-right: 5px; margin-left: 0px; line-height: 36px;}
+
+    /* icon small white */
+    .ibw-archive{background: url('../img/icons/wb/ic_archive.png') center center no-repeat transparent;}
+    .ibw-attachment{background: url('../img/icons/wb/ic_attachment.png') center center no-repeat transparent;}
+    .ibw-bookmark{background: url('../img/icons/wb/ic_bookmark.png') center center no-repeat transparent;}
+    .ibw-brush{background: url('../img/icons/wb/ic_brush.png') center center no-repeat transparent;}
+    .ibw-calc{background: url('../img/icons/wb/ic_calc.png') center center no-repeat transparent;}
+    .ibw-calendar{background: url('../img/icons/wb/ic_calendar.png') center center no-repeat transparent;}
+    .ibw-cancel{background: url('../img/icons/wb/ic_cancel.png') center center no-repeat transparent;}
+    .ibw-chat{background: url('../img/icons/wb/ic_chat.png') center center no-repeat transparent;}
+    .ibw-chats{background: url('../img/icons/wb/ic_chats.png') center center no-repeat transparent;}
+    .ibw-cloud{background: url('../img/icons/wb/ic_cloud.png') center center no-repeat transparent;}
+    .ibw-delete{background: url('../img/icons/wb/ic_delete.png') center center no-repeat transparent;}
+    .ibw-documents{background: url('../img/icons/wb/ic_documents.png') center center no-repeat transparent;}
+    .ibw-down{background: url('../img/icons/wb/ic_down.png') center center no-repeat transparent;}
+    .ibw-donw_circle{background: url('../img/icons/wb/ic_down_circle.png') center center no-repeat transparent;}
+    .ibw-download{background: url('../img/icons/wb/ic_download.png') center center no-repeat transparent;}
+    .ibw-edit{background: url('../img/icons/wb/ic_edit.png') center center no-repeat transparent;}
+    .ibw-empty_document{background: url('../img/icons/wb/ic_empty_document.png') center center no-repeat transparent;}
+    .ibw-favorite{background: url('../img/icons/wb/ic_favorite.png') center center no-repeat transparent;}
+    .ibw-folder{background: url('../img/icons/wb/ic_folder.png') center center no-repeat transparent;}
+    .ibw-fullscreen{background: url('../img/icons/wb/ic_fullscreen.png') center center no-repeat transparent;}
+    .ibw-graph{background: url('../img/icons/wb/ic_graph.png') center center no-repeat transparent;}
+    .ibw-grid{background: url('../img/icons/wb/ic_grid.png') center center no-repeat transparent;}
+    .ibw-left{background: url('../img/icons/wb/ic_left.png') center center no-repeat transparent;}
+    .ibw-left_circle{background: url('../img/icons/wb/ic_left_circle.png') center center no-repeat transparent;}
+    .ibw-list{background: url('../img/icons/wb/ic_list.png') center center no-repeat transparent;}
+    .ibw-lock{background: url('../img/icons/wb/ic_lock.png') center center no-repeat transparent;}
+    .ibw-mail{background: url('../img/icons/wb/ic_mail.png') center center no-repeat transparent;}
+    .ibw-minus{background: url('../img/icons/wb/ic_minus.png') center center no-repeat transparent;}
+    .ibw-ok{background: url('../img/icons/wb/ic_ok.png') center center no-repeat transparent;}
+    .ibw-picture{background: url('../img/icons/wb/ic_picture.png') center center no-repeat transparent;}
+    .ibw-pin{background: url('../img/icons/wb/ic_pin.png') center center no-repeat transparent;}
+    .ibw-plus{background: url('../img/icons/wb/ic_plus.png') center center no-repeat transparent;}
+    .ibw-power{background: url('../img/icons/wb/ic_power.png') center center no-repeat transparent;}
+    .ibw-print{background: url('../img/icons/wb/ic_print.png') center center no-repeat transparent;}
+    .ibw-refresh{background: url('../img/icons/wb/ic_refresh.png') center center no-repeat transparent;}
+    .ibw-right{background: url('../img/icons/wb/ic_right.png') center center no-repeat transparent;}
+    .ibw-right_circle{background: url('../img/icons/wb/ic_right_circle.png') center center no-repeat transparent;}
+    .ibw-settings{background: url('../img/icons/wb/ic_settings.png') center center no-repeat transparent;}
+    .ibw-sound{background: url('../img/icons/wb/ic_sound.png') center center no-repeat transparent;}
+    .ibw-sync{background: url('../img/icons/wb/ic_sync.png') center center no-repeat transparent;}
+    .ibw-tag{background: url('../img/icons/wb/ic_tag.png') center center no-repeat transparent;}
+    .ibw-target{background: url('../img/icons/wb/ic_target.png') center center no-repeat transparent;}
+    .ibw-text_document{background: url('../img/icons/wb/ic_text_document.png') center center no-repeat transparent;}
+    .ibw-time{background: url('../img/icons/wb/ic_time.png') center center no-repeat transparent;}
+    .ibw-unlock{background: url('../img/icons/wb/ic_unlock.png') center center no-repeat transparent;}
+    .ibw-up{background: url('../img/icons/wb/ic_up.png') center center no-repeat transparent;}
+    .ibw-up_circle{background: url('../img/icons/wb/ic_up_circle.png') center center no-repeat transparent;}
+    .ibw-user{background: url('../img/icons/wb/ic_user.png') center center no-repeat transparent;}
+    .ibw-users{background: url('../img/icons/wb/ic_users.png') center center no-repeat transparent;}
+    .ibw-zoom{background: url('../img/icons/wb/ic_zoom.png') center center no-repeat transparent;}
+    /* eof icon small whit */
+
+    /* icon small black */
+    .ibb-archive{background: url('../img/icons/bb/ic_archive.png') center center no-repeat transparent;}
+    .ibb-attachment{background: url('../img/icons/bb/ic_attachment.png') center center no-repeat transparent;}
+    .ibb-bookmark{background: url('../img/icons/bb/ic_bookmark.png') center center no-repeat transparent;}
+    .ibb-brush{background: url('../img/icons/bb/ic_brush.png') center center no-repeat transparent;}
+    .ibb-calc{background: url('../img/icons/bb/ic_calc.png') center center no-repeat transparent;}
+    .ibb-calendar{background: url('../img/icons/bb/ic_calendar.png') center center no-repeat transparent;}
+    .ibb-cancel{background: url('../img/icons/bb/ic_cancel.png') center center no-repeat transparent;}
+    .ibb-chat{background: url('../img/icons/bb/ic_chat.png') center center no-repeat transparent;}
+    .ibb-chats{background: url('../img/icons/bb/ic_chats.png') center center no-repeat transparent;}
+    .ibb-cloud{background: url('../img/icons/bb/ic_cloud.png') center center no-repeat transparent;}
+    .ibb-delete{background: url('../img/icons/bb/ic_delete.png') center center no-repeat transparent;}
+    .ibb-documents{background: url('../img/icons/bb/ic_documents.png') center center no-repeat transparent;}
+    .ibb-down{background: url('../img/icons/bb/ic_down.png') center center no-repeat transparent;}
+    .ibb-donw_circle{background: url('../img/icons/bb/ic_down_circle.png') center center no-repeat transparent;}
+    .ibb-download{background: url('../img/icons/bb/ic_download.png') center center no-repeat transparent;}
+    .ibb-edit{background: url('../img/icons/bb/ic_edit.png') center center no-repeat transparent;}
+    .ibb-empty_document{background: url('../img/icons/bb/ic_empty_document.png') center center no-repeat transparent;}
+    .ibb-favorite{background: url('../img/icons/bb/ic_favorite.png') center center no-repeat transparent;}
+    .ibb-folder{background: url('../img/icons/bb/ic_folder.png') center center no-repeat transparent;}
+    .ibb-fullscreen{background: url('../img/icons/bb/ic_fullscreen.png') center center no-repeat transparent;}
+    .ibb-graph{background: url('../img/icons/bb/ic_graph.png') center center no-repeat transparent;}
+    .ibb-grid{background: url('../img/icons/bb/ic_grid.png') center center no-repeat transparent;}
+    .ibb-left{background: url('../img/icons/bb/ic_left.png') center center no-repeat transparent;}
+    .ibb-left_circle{background: url('../img/icons/bb/ic_left_circle.png') center center no-repeat transparent;}
+    .ibb-list{background: url('../img/icons/bb/ic_list.png') center center no-repeat transparent;}
+    .ibb-lock{background: url('../img/icons/bb/ic_lock.png') center center no-repeat transparent;}
+    .ibb-mail{background: url('../img/icons/bb/ic_mail.png') center center no-repeat transparent;}
+    .ibb-minus{background: url('../img/icons/bb/ic_minus.png') center center no-repeat transparent;}
+    .ibb-ok{background: url('../img/icons/bb/ic_ok.png') center center no-repeat transparent;}
+    .ibb-picture{background: url('../img/icons/bb/ic_picture.png') center center no-repeat transparent;}
+    .ibb-pin{background: url('../img/icons/bb/ic_pin.png') center center no-repeat transparent;}
+    .ibb-plus{background: url('../img/icons/bb/ic_plus.png') center center no-repeat transparent;}
+    .ibb-power{background: url('../img/icons/bb/ic_power.png') center center no-repeat transparent;}
+    .ibb-print{background: url('../img/icons/bb/ic_print.png') center center no-repeat transparent;}
+    .ibb-refresh{background: url('../img/icons/bb/ic_refresh.png') center center no-repeat transparent;}
+    .ibb-right{background: url('../img/icons/bb/ic_right.png') center center no-repeat transparent;}
+    .ibb-right_circle{background: url('../img/icons/bb/ic_right_circle.png') center center no-repeat transparent;}
+    .ibb-settings{background: url('../img/icons/bb/ic_settings.png') center center no-repeat transparent;}
+    .ibb-sound{background: url('../img/icons/bb/ic_sound.png') center center no-repeat transparent;}
+    .ibb-sync{background: url('../img/icons/bb/ic_sync.png') center center no-repeat transparent;}
+    .ibb-tag{background: url('../img/icons/bb/ic_tag.png') center center no-repeat transparent;}
+    .ibb-target{background: url('../img/icons/bb/ic_target.png') center center no-repeat transparent;}
+    .ibb-text_document{background: url('../img/icons/bb/ic_text_document.png') center center no-repeat transparent;}
+    .ibb-time{background: url('../img/icons/bb/ic_time.png') center center no-repeat transparent;}
+    .ibb-unlock{background: url('../img/icons/bb/ic_unlock.png') center center no-repeat transparent;}
+    .ibb-up{background: url('../img/icons/bb/ic_up.png') center center no-repeat transparent;}
+    .ibb-up_circle{background: url('../img/icons/bb/ic_up_circle.png') center center no-repeat transparent;}
+    .ibb-user{background: url('../img/icons/bb/ic_user.png') center center no-repeat transparent;}
+    .ibb-users{background: url('../img/icons/bb/ic_users.png') center center no-repeat transparent;}
+    .ibb-zoom{background: url('../img/icons/bb/ic_zoom.png') center center no-repeat transparent;}
+    /* eof icon small black */
+
+
+/* eof big icons */
