@@ -3,13 +3,17 @@ An open source and FREE GSM Code selling store.
 
 ## DEMO Admin Panel Credentials
 http://www.exclusiveunlock.co.uk/admin/
-U: admin@exclusiveunlock.co.uk
-P: demo1234
+
+U: `admin@exclusiveunlock.co.uk`
+
+P: `demo1234`
 
 ## DEMO User Panel Credentials:
 http://localhost:8000/
-U: demo@demo.com
-P: demo1234
+
+U: `demo@demo.com`
+
+P: `demo1234`
 
 ## Core Features:
 * Unlock code by IMEI service.
@@ -36,10 +40,14 @@ P: demo1234
 
 ## Admin Panel Credentials:
 http://localhost:8000/index.php/Admin
-U: admin@exclusiveunlock.co.uk
-P: demo1234
+
+U: `admin@exclusiveunlock.co.uk`
+
+P: `demo1234`
 
 ## User Panel Credentials:
 http://localhost:8000/
-U: demo@demo.com
-P: demo1234
+
+U: `demo@demo.com`
+
+P: `demo1234`
