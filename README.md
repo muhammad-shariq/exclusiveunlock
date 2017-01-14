@@ -66,4 +66,4 @@ If you discover a security vulnerability within this project, please send an e-m
 
 ## License
 
-MIT: [http://anthony.mit-license.org](http://anthony.mit-license.org)
+MIT: [https://opensource.org/licenses/MIT](https://opensource.org/licenses/MIT)
