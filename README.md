@@ -58,11 +58,11 @@ If you come across any issues please [report them here](https://github.com/muham
 
 ## Contributing
 
-Thank you for considering contributing to the Exclusiveunlock project! Please feel free to make any pull requests, or e-mail me a feature request you would like to see in the future email at support@unlocknetwork.co.uk.
+Thank you for considering contributing to the Exclusiveunlock project! Please feel free to make any pull requests, or e-mail me a feature request you would like to see in the future email at shariq2k@yahoo.com.
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within this project, please send an e-mail to support@unlocknetwork.co.uk, or create a pull request if possible. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this project, please send an e-mail to shariq2k@yahoo.com, or create a pull request if possible. All security vulnerabilities will be promptly addressed.
 
 ## License
 
