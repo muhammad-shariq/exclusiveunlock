@@ -54,11 +54,11 @@ U: `demo@demo.com`
 P: `demo1234`
 
 ## Cron Jobs ##
-* * * * * /usr/bin/php56 /<PATH>/index.php cron send_imei_orders
-* * * * * /usr/bin/php56 /<PATH>/index.php cron send_file_orders
+`* * * * * /usr/bin/php56 /<PATH>/index.php cron send_imei_orders`
+`* * * * * /usr/bin/php56 /<PATH>/index.php cron send_file_orders`
 
-*/10 * * * * /usr/bin/php56 /<PATH>/index.php cron receive_imei_orders
-*/10 * * * * /usr/bin/php56 /<PATH>/index.php cron receive_file_orders
+`*/10 * * * * /usr/bin/php56 /<PATH>/index.php cron receive_imei_orders`
+`*/10 * * * * /usr/bin/php56 /<PATH>/index.php cron receive_file_orders`
 
 ## Issues
 
