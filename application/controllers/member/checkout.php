@@ -30,8 +30,8 @@ class checkout extends FSD_Controller
 				    'username' => $paypal_settings[0]['UserName'],
 				    'password' => $paypal_settings[0]['Password'],
 				    'signature' => $paypal_settings[0]['Signature'],
-				    'test_mode' => true
-					);
+				    'test_mode' => TEST_MODE
+				);
 				$this->merchant->initialize($settings);
 				
 				### Set amount on the basis of percent
@@ -45,10 +45,12 @@ class checkout extends FSD_Controller
 				
 				### set paramerters for paypals
 				$params = array(
-		    	'amount' => $amount,
-		    	'currency' => $paypal_settings[0]['Currency'],
-		    	'return_url' => 'http://demo.unlocknetwork.co.uk/index.php/member/checkout/complete',
-		    	'cancel_url' => 'http://demo.unlocknetwork.co.uk/index.php/member/checkout/cancel');		
+					'amount' => $amount,
+					'description' => 'Credits '. $this->input->post('Credit'),
+		    		'currency' => $paypal_settings[0]['Currency'],
+		    		'return_url' => site_url('member/checkout/complete'),
+					'cancel_url' => site_url('member/checkout/cancel')
+				);		
 				$response = $this->merchant->purchase($params);		
 		  }
 		
@@ -70,18 +72,19 @@ class checkout extends FSD_Controller
 
 	    ### Initilize settings	      		
 		$settings = array(
-				    'username' => $paypal_settings[0]['UserName'],
-				    'password' => $paypal_settings[0]['Password'],
-				    'signature' => $paypal_settings[0]['Signature'],
-				    'test_mode' => true
-					);
+			'username' => $paypal_settings[0]['UserName'],
+			'password' => $paypal_settings[0]['Password'],
+			'signature' => $paypal_settings[0]['Signature'],
+			'test_mode' => TEST_MODE
+		);
 		$this->merchant->initialize($settings);
 		
 		$params = array(
-		    	'amount' => $this->session->userdata('addcredit'),
-		    	'currency' => $paypal_settings[0]['Currency'],
-		    	'return_url' => 'http://demo.unlocknetwork.co.uk/index.php/member/checkout/complete',
-		    	'cancel_url' => 'http://demo.unlocknetwork.co.uk/index.php/member/checkout/cancel');
+			'amount' => $this->session->userdata('addcredit'),
+			'currency' => $paypal_settings[0]['Currency'],
+			'return_url' => site_url('member/checkout/complete'),
+			'cancel_url' => site_url('member/checkout/cancel')
+		);
 		
 		$this->merchant->initialize($settings);
 		

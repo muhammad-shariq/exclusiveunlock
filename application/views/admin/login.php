@@ -67,7 +67,7 @@
 </head>
 <body>
     <div class="loginBlock" id="login" style="display: block;">
-        <h1>Welcom. Please Sign In</h1>
+        <h1>Welcome! Please Sign In</h1>
         <div class="dr"><span></span></div>
         <div class="loginForm">
             <?php $this->load->view('admin/includes/message'); ?>

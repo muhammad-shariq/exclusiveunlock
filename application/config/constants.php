@@ -44,5 +44,8 @@ define('BROUTFORCE_CODE_REQUEST', 'BFC');
 
 /* Client Libraries */
 define('LIBRARY_DHURU_CLIENT', 1);
+
+/* Payment Gateways Settings */
+define('TEST_MODE', TRUE);
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */

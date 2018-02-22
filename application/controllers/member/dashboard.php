@@ -14,6 +14,7 @@ class dashboard extends FSD_Controller
 		$this->load->model('fileservices_model');
 		$this->load->model('menu_model');
 		$this->load->model('credit_model');
+		$this->load->model('payment_model');
 	}
 	
 	public function index()
@@ -69,6 +70,7 @@ class dashboard extends FSD_Controller
 		$data['Title'] = "Dashboard";
 		$data['template'] = "member/addcredit";
 		$data['credit'] = $this->credit_model->get_credit($id);
+		$data['paypal_settings'] = $this->payment_model->get_where(array('ID'=>1));
 		if($data['credit'][0]['credit'] == ""  )
 		{
 			$data['credit'][0]['credit'] = 0;
