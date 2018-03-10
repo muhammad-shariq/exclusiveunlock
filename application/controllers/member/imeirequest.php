@@ -241,11 +241,11 @@ class imeirequest extends FSD_Controller
 	/* IMEI Validation */
 	public function imei_check($str)
 	{
-		$imeis = explode("\r\n", $str);
+		$imeis = explode(PHP_EOL, $str);
 		$imeis = array_unique($imeis);
 		foreach($imeis as $imei)
 		{    		
-			if( $this->is_imei($imei) ) 
+			if( !$this->is_imei($imei) ) 
 			{
 				$this->form_validation->set_message('imei_check', 'One or more IMEI(s) are invalid.');
 				return FALSE;
