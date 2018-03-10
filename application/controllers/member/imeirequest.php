@@ -245,12 +245,43 @@ class imeirequest extends FSD_Controller
 		$imeis = array_unique($imeis);
 		foreach($imeis as $imei)
 		{    		
-			if(strlen(trim($imei)) <> 15) 
+			if( $this->is_imei($imei) ) 
 			{
 				$this->form_validation->set_message('imei_check', 'One or more IMEI(s) are invalid.');
 				return FALSE;
 			}			
 		}
 		return TRUE;		
+	}
+	
+	private function is_imei($imei)
+	{
+		// Should be 15 digits
+		if(strlen($imei) != 15 || !ctype_digit($imei))
+			return false;
+		// Get digits
+		$digits = str_split($imei);
+		// Remove last digit, and store it
+		$imei_last = array_pop($digits);
+		// Create log
+		$log = array();
+		// Loop through digits
+		foreach($digits as $key => $n)
+		{
+			// If key is odd, then count is even
+			if($key & 1)
+			{
+				// Get double digits
+				$double = str_split($n * 2);
+				// Sum double digits
+				$n = array_sum($double);
+			}
+			// Append log
+			$log[] = $n;
+		}
+		// Sum log & multiply by 9
+		$sum = array_sum($log) * 9;
+		// Compare the last digit with $imei_last
+		return substr($sum, -1) == $imei_last;
 	}	
 }

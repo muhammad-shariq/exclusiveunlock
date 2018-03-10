@@ -18,7 +18,6 @@ P: `demo1234`
 ## Core Features:
 * Unlock code by IMEI service.
 * Unlock code By file service.
-* Server logs and credits.
 * Unlimited codes.
 * Unlimited methods or services.
 * Unlimited users.
