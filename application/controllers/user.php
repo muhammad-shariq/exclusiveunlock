@@ -23,7 +23,7 @@ class User extends FSD_Controller
 				if( count($query) > 0)
 				{
 					//set token for password
-					$token = array('Token' => $query[0]['ID']."-".rand(12345,54321) );
+					$token = array('Token' => $query[0]['ID']."-".rand(123456789, 987654321) );
 					$this->member_model->update($token, $query[0]['ID']);
 					## Get Issue Email Template ##
 					$data = $this->autoresponder_model->get_where(array('Status' => 'Enabled', 'ID' => 4)); // Forgot Password Token Email					
@@ -37,7 +37,7 @@ class User extends FSD_Controller
 						$message = html_entity_decode($data[0]['Message']);
 						
 						//Information
-						$post['TOKEN_URL'] = site_url('user/set_password/'.$token['Token']);
+						$post['TokenUrl'] = site_url('user/set_password/'.$token['Token']);
 						$post['FirstName'] = $query[0]['FirstName'];
 						$post['LastName'] = $query[0]['LastName'];
 						$post['Email'] = $query[0]['Email'];
@@ -91,7 +91,7 @@ class User extends FSD_Controller
 				$this->fsd->email_template($post, $from_email, $from_name, $to_email, $subject, $message );
 				$this->fsd->sent_email($from_email, $from_name,$to_email, $subject, $message );
 				
-				$userdata = array('Token' => NULL, 'Password' => md5($password) );
+				$userdata = array('Token' => NULL, 'Password' => $password );
 				$update = $this->member_model->update($userdata, $data[0]['ID']);
 				$this->session->set_flashdata("success", "Your new password has been sent to your email account.");
 				redirect('login');						
@@ -111,6 +111,7 @@ class User extends FSD_Controller
 			{
 				$data = $this->input->post(NULL, TRUE);			
 				$query = $this->member_model->get_where(array( 'Email' => $data['Email'], 'Password' => md5($data['Password'])));
+				
 				if(count($query) > 0)
 				{
 					if($query[0]["Status"] == "Enabled")
@@ -161,11 +162,12 @@ class User extends FSD_Controller
 			{
 				$data = $this->input->post(NULL, TRUE); //collect form data				
 				//register data to database
+				$token = rand(123456789, 987654321);
 				unset($data['CPassword']);
+				$data['Token'] = $token;
 				$data['Password'] = md5($data['Password']);
-				$data['Status'] = 'Enabled';
+				$data['Status'] = 'Disabled';
                 $data["CreatedDateTime"] = date("y-m-d H:i:s");
-                $data["UpdatedDateTime"] = date("y-m-d H:i:s");
 								
 				$this->member_model->insert($data);	
 				## Get Issue Email Template ##
@@ -184,12 +186,35 @@ class User extends FSD_Controller
 					$post['FirstName'] = $data['FirstName'];
 					$post['LastName'] = $data['LastName'];
 					$post['Email'] = $data['Email'];
+					$post['Password'] = $this->input->post('Password', TRUE);
+					$post['TokenUrl'] = site_url('user/verify/'.$token);
+				
+					$this->fsd->email_template($post, $from_email, $from_name, $to_email, $subject, $message );
+					$this->fsd->sent_email($from_email, $from_name,$to_email, $subject, $message );
+				}
+
+				## Get Issue Email Template ##
+				$template = $this->autoresponder_model->get_where(array('Status' => 'Enabled', 'ID' => 8)); // Registration notification to admin
+				## Send Email with Template ## 		
+				if(isset($template) && count($template)>0)
+				{
+					$from_name = $template[0]['FromName'];
+					$from_email = $template[0]['FromEmail'];
+					$to_email = $template[0]['ToEmail'];
+					$subject = $template[0]['Subject'];
+					$message = html_entity_decode($template[0]['Message']);
+					
+					//Information
+					$post['Password'] = $password;
+					$post['FirstName'] = $data['FirstName'];
+					$post['LastName'] = $data['LastName'];
+					$post['Email'] = $data['Email'];
 					$post['Password'] = $this->input->post('Password', TRUE);					
 				
 					$this->fsd->email_template($post, $from_email, $from_name, $to_email, $subject, $message );
-					$this->fsd->sent_email($from_email, $from_name,$to_email, $subject, $message );					
+					$this->fsd->sent_email($from_email, $from_name,$to_email, $subject, $message );
 				}
-				$this->session->set_flashdata("success","Account has been created successfully");
+				$this->session->set_flashdata("success","A verification email has been sent to your email.");
 				redirect('login');									
 			}
 		}
@@ -197,13 +222,45 @@ class User extends FSD_Controller
 		$data["title"] = "Register";
 		$data["heading"] = "Register";
 		$data['master_template'] = "user/register";
-		$this->load->view("user/master_template",$data);													
+		$this->load->view("user/master_template",$data);
 	}
 
 	public function logout()
 	{
 		$this->session->sess_destroy();
 		redirect('login');	
+	}
+
+	public function services_list()
+	{
+		$this->load->model('method_model');
+		$data = array();
+		$data['imei_services'] = $this->method_model->method_with_networks();
+		$data["title"] = "Services List";
+		$data["heading"] = "Services List";
+		$data['master_template'] = "user/services_list";
+		$this->load->view("user/master_template", $data);
+	}
+
+	public function verify($token)
+	{
+		if(empty($token))
+			redirect('login');
+			
+		$data = $this->member_model->get_where(array('Token' => $token, 'Status' => 'Disabled' ));
+		if(count($data) > 0)
+		{
+			$userdata = [
+				'Token' => NULL, 
+				'Status' => 'Enabled',
+				'UpdatedDateTime' => date("y-m-d H:i:s")
+			];
+			$update = $this->member_model->update($userdata, $data[0]['ID']);
+			$this->session->set_flashdata("success", "Your account has been verified successfully.");
+			redirect('login');
+		}
+		$this->session->set_flashdata("fail","Invalid token URL.");
+		redirect('login');
 	}
 }
 

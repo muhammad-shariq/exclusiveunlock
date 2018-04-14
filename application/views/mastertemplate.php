@@ -10,22 +10,22 @@
 <!--<![endif]--><head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Exclusive Unlock:: <?php echo $Title; ?></title>
+	<title>Exclusiveunlock:: <?php echo $Title; ?></title>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <!--Google Font-->
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/style.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.css" type="text/css" media="screen">
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/demo_table.css" type="text/css" media="screen">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet" />
 
     
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <!-- Styles -->
 
 </head>
@@ -78,9 +78,9 @@
             <ul class="nav navbar-nav">
             <li <?php echo($this->uri->uri_string()=='member/dashboard'?'class="active"':''); ?>><a href="<?php echo site_url('member/dashboard'); ?>">Home</a></li>
             <li <?php echo($this->uri->uri_string(2)=='member/imeirequest'?'class="active"':''); ?>><a href="<?php echo site_url('member/imeirequest'); ?>">IMEI Request</a></li>
-<li <?php echo($this->uri->uri_string(2)=='member/fileservices'?'class="active"':''); ?>><a href="<?php echo site_url('member/fileservices'); ?>">File Request</a></li>            
+            <li <?php echo($this->uri->uri_string(2)=='member/fileservices'?'class="active"':''); ?>><a href="<?php echo site_url('member/fileservices'); ?>">File Request</a></li>
             <li <?php echo($this->uri->uri_string(2)=='member/imeirequest/history'?'class="active"':''); ?>><a href="<?php echo site_url('member/imeirequest/history'); ?>">IMEI History</a></li>            
-            <?php /*<li <?php echo($this->uri->uri_string(2)=='member/imeirequest/verify'?'class="active"':''); ?>><a href="<?php echo site_url('member/imeirequest/verify'); ?>">Verify IMEI Request</a></li>*/ ?>            
+            <?php /*<li <?php echo($this->uri->uri_string(2)=='member/imeirequest/verify'?'class="active"':''); ?>><a href="<?php echo site_url('member/imeirequest/verify'); ?>">Verify IMEI Request</a></li>*/ ?>
             <li <?php echo($this->uri->uri_string(2)=='member/fileservices/history'?'class="active"':''); ?>><a href="<?php echo site_url('member/fileservices/history'); ?>">File History</a></li>
             <li <?php echo($this->uri->uri_string(2)=='member/dashboard/profile'?'class="active"':''); ?>><a href="<?php echo site_url('member/dashboard/profile'); ?>">My Account</a></li>
             </ul>

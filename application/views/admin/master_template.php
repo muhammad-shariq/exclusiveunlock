@@ -17,7 +17,7 @@
     <![endif]-->            
     <link rel='stylesheet' type='text/css' href='<?php echo $this->config->item('assets_url');?>css/fullcalendar.print.css' media='print' />
     
-    <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
+    <!--<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
     <script type='text/javascript' src='<?php echo $this->config->item('assets_url');?>js/plugins/jquery/jquery-1.9.1.min.js'></script>
     <script type='text/javascript' src='<?php echo $this->config->item('assets_url');?>js/plugins/jquery/jquery-ui-1.10.1.custom.min.js'></script>
     <script type='text/javascript' src='<?php echo $this->config->item('assets_url');?>js/plugins/jquery/jquery-migrate-1.1.1.min.js'></script>

@@ -22,7 +22,8 @@ class FSD_Controller extends CI_Controller
 	 	
 	 	$this->load->model('configuration_model');
 	 	$config = $this->configuration_model->get_all();
-	 	$this->Twitter = $config[0]['Twitter'];
+		$this->ApplicationName = $config[0]['ApplicationName'];
+		$this->Twitter = $config[0]['Twitter'];
 	 	$this->FaceBook = $config[0]['FaceBook'];	 	
 	 	$this->GooglePlus = $config[0]['GooglePlus'];
 	 	$this->LinkedIn = $config[0]['LinkedIn'];

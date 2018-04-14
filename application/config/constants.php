@@ -39,6 +39,7 @@ define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 /* Credits transaction Codes */
 
 define('CASH_PAYMENT_RECEIVED', 'CPR');
+define('PAYPAL_PAYMENT_RECEIVED', 'PPR');
 define('IMEI_CODE_REQUEST', 'IMC');
 define('BROUTFORCE_CODE_REQUEST', 'BFC');
 

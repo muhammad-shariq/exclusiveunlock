@@ -61,6 +61,9 @@ P: `demo1234`
 
 `*/10 * * * * /usr/bin/php56 /<PATH>/index.php cron receive_file_orders`
 
+## Installation Service
+If you need installation service or pro-features, Please contact me at shariq2k@yahoo.com.
+
 ## Issues
 
 If you come across any issues please [report them here](https://github.com/muhammad-shariq/exclusiveunlock/issues).

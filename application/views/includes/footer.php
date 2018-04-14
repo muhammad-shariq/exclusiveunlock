@@ -1,10 +1,10 @@
 <footer class="home-footer">
 
 </footer>
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
- <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+ <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
  <script type='text/javascript' src='<?php echo base_url(); ?>assets/js/jquery.cookie.js'></script>
- <!-- <script type='text/javascript' src='http://gsmworkshop.localhost/assets/js/cookies.js'></script>
+ <!-- <script type='text/javascript' src='//gsmworkshop.localhost/assets/js/cookies.js'></script>
  	!-->
  <script type="text/javascript" language="javascript" src="<?php echo base_url(); ?>js/bootstrap.js"></script>
  <script type="text/javascript" language="javascript" src="<?php echo base_url(); ?>js/jquery.dataTables.js"></script>

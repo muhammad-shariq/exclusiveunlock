@@ -1,19 +1,14 @@
 <div class="dashboard">
-<div class="row">
-  <div class="col-lg-12">
-  <h2>Add Credits</h2>
-  
-  </div>
-</div>
 
 <div class="row">
-<div class="col-lg-8">
+<div class="col-lg-6">
+<h2>Add Credits</h2>
 <?php $this->load->view('includes/messages'); ?>
 <?php echo form_open('member/checkout', array('role' => 'form', 'method' => 'post','id' => 'imeireq' ,'name' => 'form2', 'class' => 'form-horizontal')); ?>      
   <div class="form-group">
     <label class="col-sm-3 control-label">No. of Credits</label>
     <div class="col-sm-3">
-    <input type="text" name="Credit"  placeholder="Credits" required class="form-control" >
+    <input type="number" min="5" step="0.1" name="Credit"  placeholder="Credits" required class="form-control" >
     </div>
   </div>
   <div class="form-group">
@@ -26,8 +21,8 @@
   </div>  
   <div class="form-group">
     <div class="col-sm-offset-3 col-sm-9">
-  <button type="submit" class="btn btn-warning btn-lg">Add Credit</button>
-  </div>
+    <button type="submit" class="btn btn-warning btn-lg">Add Credit</button>
+    </div>
   </div>
   
   <div class="form-group">

@@ -14,47 +14,55 @@ class checkout extends FSD_Controller
 	
 	public function index()
 	{
-		$this->form_validation->set_rules('Credit', 'Credit', 'required|');
-		 if ($this->form_validation->run() == FALSE)
-	      {
-	      	$this->session->set_flashdata("fail","Invalid Credit");
-	        redirect('member/checkout');
-	      }
-	      else
-	      {
-	      		### Get Paypal settings
-	      		$paypal_settings = $this->payment_model->get_where(array('ID'=>1));
-	      		
-	      		### Initilize settings	      		
-		      	$settings = array(
-				    'username' => $paypal_settings[0]['UserName'],
-				    'password' => $paypal_settings[0]['Password'],
-				    'signature' => $paypal_settings[0]['Signature'],
-				    'test_mode' => TEST_MODE
-				);
+		if($this->input->server('REQUEST_METHOD') === 'POST')
+		{
+			$this->form_validation->set_rules('Credit', 'Credit', 'required|numeric|greater_than_equal_to[5]');
+			if($this->form_validation->run() === FALSE)
+			{
+				$this->session->set_flashdata("fail", validation_errors());
+				redirect('member/dashboard/addfund');
+			}
+			else
+			{
+				### Get Paypal settings
+				$paypal_settings = $this->payment_model->get_where(array('ID'=>1));
+				
+				### Initilize settings	      		
+				$settings = array(
+					'username' => $paypal_settings[0]['UserName'],
+					'password' => $paypal_settings[0]['Password'],
+					'signature' => $paypal_settings[0]['Signature'],
+					'test_mode' => TEST_MODE
+					);
 				$this->merchant->initialize($settings);
 				
 				### Set amount on the basis of percent
 				$amount = $this->input->post('Credit');
+				$this->session->set_userdata('addcredit', $amount);
 				if($paypal_settings > 0)
 				{
 					$percent = ( ( $amount * $paypal_settings[0]['percent'] ) / 100 );
 					$amount += $percent;
+					$amount += 0.35; // PayPal extra fee
 				}
-				$this->session->set_userdata('addcredit',$amount);
+				$this->session->set_userdata('addamount', $amount);
 				
 				### set paramerters for paypals
 				$params = array(
 					'amount' => $amount,
-					'description' => 'Credits '. $this->input->post('Credit'),
-		    		'currency' => $paypal_settings[0]['Currency'],
-		    		'return_url' => site_url('member/checkout/complete'),
+					'name' => 'Store Credits',
+					'description' => 'Add Store Credits '. $this->input->post('Credit'),
+					'currency' => $paypal_settings[0]['Currency'],
+					'return_url' => site_url('member/checkout/complete'),
 					'cancel_url' => site_url('member/checkout/cancel')
 				);		
 				$response = $this->merchant->purchase($params);		
-		  }
-		
-		
+			}
+		}
+		else
+		{
+			redirect('member/dashboard/addfund');
+		}
 	}
 	
 	function cancel()
@@ -80,7 +88,9 @@ class checkout extends FSD_Controller
 		$this->merchant->initialize($settings);
 		
 		$params = array(
-			'amount' => $this->session->userdata('addcredit'),
+			'amount' => $this->session->userdata('addamount'),
+			'name' => 'Store Credits',
+			'description' => 'Add Store Credits '. $this->session->userdata('addcredit'),
 			'currency' => $paypal_settings[0]['Currency'],
 			'return_url' => site_url('member/checkout/complete'),
 			'cancel_url' => site_url('member/checkout/cancel')
@@ -97,7 +107,7 @@ class checkout extends FSD_Controller
 				$this->load->model('credit_model');
 				$credit_data = array(
 				'MemberID' => $this->session->userdata('MemberID'),
-				'TransactionCode' => 'PCK',
+				'TransactionCode' => PAYPAL_PAYMENT_RECEIVED,
 				'TransactionID' => $_GET['PayerID'],
 				'Description' => "Add Credit from Paypal",
 				'Amount' => $this->session->userdata('addcredit'),

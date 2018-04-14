@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.2
--- http://www.phpmyadmin.net
+-- version 4.6.6
+-- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 14, 2017 at 08:28 PM
--- Server version: 10.1.19-MariaDB
--- PHP Version: 5.6.28
+-- Generation Time: Apr 14, 2018 at 06:28 AM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 7.0.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `exclusiveunlock`
+-- Database: `imei_imei`
 --
 
 -- --------------------------------------------------------
@@ -46,7 +46,7 @@ CREATE TABLE `app_configurations` (
 --
 
 INSERT INTO `app_configurations` (`ApplicationName`, `ApplicationURL`, `Email`, `AnalyticsCode`, `FaceBook`, `Twitter`, `LinkedIn`, `GooglePlus`, `Skype`, `CallUs`, `CurrencyCode`, `Status`) VALUES
-('Exclusiveunlock', 'http://www.exclusiveunlock.co.uk', 'shariq@ibussolutions.com', '', 'http://facebook.com', 'http://twitter.com', 'http://linkedin.com', 'http://google.com', 'exclusiveunlock', '11-115454-45', 'GBP', 'Online');
+('exclusiveunlock.local', 'https://exclusiveunlock.local', 'admin@exclusiveunlock.local', 'UA-114620617-2', 'https://web.facebook.com/', '', '', '', '', '', 'USD', 'Online');
 
 -- --------------------------------------------------------
 
@@ -72,14 +72,14 @@ CREATE TABLE `cms_autoresponders` (
 --
 
 INSERT INTO `cms_autoresponders` (`ID`, `Title`, `FromEmail`, `FromName`, `ToEmail`, `Subject`, `Message`, `UpdatedDateTime`, `CreatedDateTime`, `Status`) VALUES
-(1, 'Registration', 'info@exclusiveunlock.co.uk', 'Exclusive Unlock', '[Email]', 'ExclusiveUnlock: Thank your for registration', '&lt;p&gt;Dear [FirstName] [LastName],&lt;br /&gt;\r\nThank you for registration&lt;/p&gt;\r\n\r\n&lt;p&gt;Email: [Email]&lt;br /&gt;\r\nPassword: [Password]&lt;/p&gt;\r\n\r\n&lt;p&gt;Regards,&lt;br /&gt;\r\nExclusiveunlock.co.uk&lt;/p&gt;\r\n', '2015-12-11 06:58:05', '2016-01-01 00:00:00', 'Enabled'),
-(2, 'IMEI Code Canceled', 'info@exclusiveunlock.co.uk', 'Exclusive Unlock', '[Email]', 'ExclusiveUnlock: IMEI Code Canceled', '&lt;p&gt;Dear [FirstName] [LastName],&lt;br /&gt;\r\nWe are very sorry, we had to cancel your code request, a refund is also issued for the credits used. Below is a quick summary of your request.&lt;/p&gt;\r\n\r\n&lt;p&gt;IMEI: [IMEI]&lt;br /&gt;\r\nCode: [Code]&lt;br /&gt;\r\nStatus: Refunded&lt;/p&gt;\r\n\r\n&lt;p&gt;Please login to your account to view all your requests.&lt;/p&gt;\r\n\r\n&lt;p&gt;Regards,&lt;br /&gt;\r\nExclusiveunlock.co.uk&lt;/p&gt;\r\n', '2015-12-11 07:03:29', '2016-01-01 00:00:00', 'Enabled'),
-(3, 'IMEI Code Issue', 'info@exclusiveunlock.co.uk', 'Exclusive Unlock', '[Email]', 'ExclusiveUnlock: IMEI Code Issued', '&lt;p&gt;Dear [FirstName] [LastName],&lt;br /&gt;\r\nWe have just issued you the Unlock code you have requested, below is a quick summary of your request with the code.&lt;/p&gt;\r\n\r\n&lt;p&gt;IMEI: [IMEI]&lt;br /&gt;\r\nCode: [Code]&lt;br /&gt;\r\nStatus: SUCCESS&lt;/p&gt;\r\n\r\n&lt;p&gt;Please login to your account to view all your requests.&lt;/p&gt;\r\n\r\n&lt;p&gt;Regards,&lt;br /&gt;\r\nExclusiveunlock.co.uk&lt;/p&gt;\r\n', '2015-12-11 07:04:35', '2016-01-01 00:00:00', 'Enabled'),
-(4, 'Forgot Password Token Email', 'info@exclusiveunlock.co.uk', 'Exclusive Unlock', '[Email]', 'ExclusiveUnlock: Password Recovery', '&lt;p&gt;Dear [FirstName] [LastName],&lt;br /&gt;\r\nWe have just received your forgot password request, below is the confirmation link to reset your password.&lt;/p&gt;\r\n\r\n&lt;p&gt;Confirmation Link: &lt;a href="[TOKEN_URL]"&gt;[TOKEN_URL]&lt;/a&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;If you did not request to reset the password, Just ignore this email.&lt;/p&gt;\r\n\r\n&lt;p&gt;Regards,&lt;br /&gt;\r\nExclusiveunlock.co.uk&lt;/p&gt;\r\n', '2015-12-11 07:09:47', '2016-01-01 00:00:00', 'Enabled'),
-(5, 'Forgot Password Reset', 'info@exclusiveunlock.co.uk', 'Exclusive Unlock', '[Email]', 'ExclusiveUnlock: Password Recovery', '&lt;p&gt;Dear [FirstName] [LastName],&lt;br /&gt;\r\nYour account password has been reset upon your request. Below are your new credentials for login into your account&lt;/p&gt;\r\n\r\n&lt;p&gt;Email: [Email]&lt;br /&gt;\r\nPassword: [Password]&lt;/p&gt;\r\n\r\n&lt;p&gt;Please change your password after login.&lt;/p&gt;\r\n\r\n&lt;p&gt;Regards,&lt;br /&gt;\r\nExclusiveunlock.co.uk&lt;/p&gt;\r\n', '2015-12-11 07:12:59', '2016-01-01 00:00:00', 'Enabled'),
-(6, 'File Code Canceled', 'info@exclusiveunlock.co.uk', 'Exclusive Unlock', '[Email]', 'ExclusiveUnlock: File Code Canceled', '&lt;p&gt;Dear [FirstName] [LastName],&lt;br /&gt;\r\nWe are very sorry, we had to cancel your code request, a refund is also issued for the credits used. Below is a quick summary of your request.&lt;/p&gt;\r\n\r\n&lt;p&gt;IMEI: [IMEI]&lt;br /&gt;\r\nCode: [Code]&lt;br /&gt;\r\nStatus: Refunded&lt;/p&gt;\r\n\r\n&lt;p&gt;Please login to your account to view all your requests.&lt;/p&gt;\r\n\r\n&lt;p&gt;Regards,&lt;br /&gt;\r\nExclusiveunlock.co.uk&lt;/p&gt;\r\n', '2015-12-11 07:03:29', '2016-01-01 00:00:00', 'Enabled'),
-(7, 'File Code Issue', 'info@exclusiveunlock.co.uk', 'Exclusive Unlock', '[Email]', 'ExclusiveUnlock: File Code Issued', '&lt;p&gt;Dear [FirstName] [LastName],&lt;br /&gt;\r\nWe have just issued you the Unlock code you have requested, below is a quick summary of your request with the code.&lt;/p&gt;\r\n\r\n&lt;p&gt;IMEI: [IMEI]&lt;br /&gt;\r\nCode: [Code]&lt;br /&gt;\r\nStatus: SUCCESS&lt;/p&gt;\r\n\r\n&lt;p&gt;Please login to your account to view all your requests.&lt;/p&gt;\r\n\r\n&lt;p&gt;Regards,&lt;br /&gt;\r\nExclusiveunlock.co.uk&lt;/p&gt;\r\n', '2015-12-11 07:04:35', '2016-01-01 00:00:00', 'Enabled'),
-(8, 'DUMMY', 'info@exclusiveunlock.co.uk', 'Exclusive Unlock', '[Email]', 'DUMMY', NULL, '2016-01-01 00:00:00', '2016-01-01 00:00:00', 'Disabled');
+(1, 'Registration Confirmation', 'support@exclusiveunlock.local', 'IMEI Network', '[Email]', 'IMEI Network:: Thank you for choosing us! Please confirm your registration!', '&lt;p&gt;Dear [FirstName] [LastName],&lt;br /&gt;\nThank you for registration, Please following the information had provided and the verification link to confirm your registration.&lt;/p&gt;\n\n&lt;p&gt;First Name: [FirstName]&lt;br /&gt;\nLast Name: [LastName]&lt;br /&gt;\nEmail: [Email]&lt;br /&gt;\nPassword: [Password]&lt;/p&gt;\n\n&lt;p&gt;Verification URL: [TOKEN_URL] (Visit the url&amp;nbsp;to confirm your registration)&lt;/p&gt;\n\n&lt;p&gt;Best Regards,&lt;br /&gt;\nIMEI Network&lt;/p&gt;\n', '2018-03-20 07:41:32', '2016-01-01 00:00:00', 'Enabled'),
+(2, 'Rejected: Order Processing Failure', 'support@exclusiveunlock.local', 'IMEI Network', '[Email]', 'IMEI Network:: Order Processing Failure', '&lt;p&gt;Dear [FirstName] [LastName],&lt;br /&gt;\nWe are sorry, your order has processing failure, amount was&amp;nbsp;refunded on your balance for the further credits using. Below is a quick summary of your request.&lt;/p&gt;\n\n&lt;p&gt;IMEI: [IMEI]&lt;br /&gt;\nCode: [Code]&lt;br /&gt;\nStatus: Refunded&lt;/p&gt;\n\n&lt;p&gt;Please login to your account to view all your requests.&lt;/p&gt;\n\n&lt;p&gt;Best Regards,&lt;br /&gt;\nIMEI Network&lt;/p&gt;\n', '2018-03-20 12:03:21', '2016-01-01 00:00:00', 'Enabled'),
+(3, 'Success: Order Completed Successfully', 'support@exclusiveunlock.local', 'IMEI Network', '[Email]', 'IMEI Network:: Order Completed Successfully', '&lt;p&gt;Dear [FirstName] [LastName],&lt;br /&gt;\nYour order&amp;nbsp;has been successfully processed.&amp;nbsp;Below is a quick summary of your request with the code.&lt;/p&gt;\n\n&lt;p&gt;IMEI: [IMEI]&lt;br /&gt;\nCode: [Code]&lt;br /&gt;\nStatus: SUCCESS&lt;/p&gt;\n\n&lt;p&gt;Please login to your account to view all your requests.&lt;/p&gt;\n\n&lt;p&gt;Best Regards,&lt;br /&gt;\nIMEI Network&lt;/p&gt;\n', '2018-03-20 12:02:17', '2016-01-01 00:00:00', 'Enabled'),
+(4, 'Forgot Password Token Email', 'support@exclusiveunlock.local', 'IMEI Network', '[Email]', 'IMEI Network:: Password Recovery', '&lt;p&gt;Dear [FirstName] [LastName],&lt;br /&gt;\nWe have just received your forgot password request, below is the confirmation link to reset your password.&lt;/p&gt;\n\n&lt;p&gt;Confirmation Link: &lt;a href=\"[TOKEN_URL]\"&gt;[TOKEN_URL]&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;If you did not request to reset the password, Just ignore this email.&lt;/p&gt;\n\n&lt;p&gt;Best Regards,&lt;br /&gt;\nIMEI Network&lt;/p&gt;\n', '2018-03-20 07:43:46', '2016-01-01 00:00:00', 'Enabled'),
+(5, 'Forgot Password Reset', 'support@exclusiveunlock.local', 'IMEI Network', '[Email]', 'IMEI Network:: Password Recovery', '&lt;p&gt;Dear [FirstName] [LastName],&lt;br /&gt;\nYour account password has been reset upon your request. Below are your new credentials for login into your account&lt;/p&gt;\n\n&lt;p&gt;Email: [Email]&lt;br /&gt;\nPassword: [Password]&lt;/p&gt;\n\n&lt;p&gt;Please change your password after login.&lt;/p&gt;\n\n&lt;p&gt;Best Regards,&lt;br /&gt;\nIMEI Network&lt;/p&gt;\n', '2018-03-20 07:44:15', '2016-01-01 00:00:00', 'Enabled'),
+(6, 'File Code Canceled', 'support@exclusiveunlock.local', 'IMEI Network', '[Email]', 'IMEI Network: File Code Canceled', '&lt;p&gt;Dear [FirstName] [LastName],&lt;br /&gt;\nWe are very sorry, we had to cancel your code request, a refund is also issued for the credits used. Below is a quick summary of your request.&lt;/p&gt;\n\n&lt;p&gt;IMEI: [IMEI]&lt;br /&gt;\nCode: [Code]&lt;br /&gt;\nStatus: Refunded&lt;/p&gt;\n\n&lt;p&gt;Please login to your account to view all your requests.&lt;/p&gt;\n\n&lt;p&gt;Regards,&lt;br /&gt;\nIMEI Network&lt;/p&gt;\n', '2018-03-10 08:24:27', '2016-01-01 00:00:00', 'Enabled'),
+(7, 'File Code Issue', 'support@exclusiveunlock.local', 'IMEI Network', '[Email]', 'IMEI Network: File Code Issued', '&lt;p&gt;Dear [FirstName] [LastName],&lt;br /&gt;\nWe have just issued you the Unlock code you have requested, below is a quick summary of your request with the code.&lt;/p&gt;\n\n&lt;p&gt;IMEI: [IMEI]&lt;br /&gt;\nCode: [Code]&lt;br /&gt;\nStatus: SUCCESS&lt;/p&gt;\n\n&lt;p&gt;Please login to your account to view all your requests.&lt;/p&gt;\n\n&lt;p&gt;Regards,&lt;br /&gt;\nIMEI Network&lt;/p&gt;\n', '2018-03-10 08:24:45', '2016-01-01 00:00:00', 'Enabled'),
+(8, 'Registration notification to admin', 'support@exclusiveunlock.local', 'IMEI Network', 'admin@exclusiveunlock.local', 'IMEI Network:: New user registered', '&lt;p&gt;Dear Admin,&lt;br /&gt;\nThis is just to notify you that you have got new registration on your website.&lt;/p&gt;\n\n&lt;p&gt;First Name: [FirstName]&lt;br /&gt;\nLast Name: [LastName]&lt;br /&gt;\nEmail: [Email]&lt;/p&gt;\n\n&lt;p&gt;Best Regards,&lt;br /&gt;\nIMEI Network&lt;/p&gt;\n', '2018-03-20 07:44:31', '2016-01-01 00:00:00', 'Enabled');
 
 -- --------------------------------------------------------
 
@@ -105,7 +105,8 @@ INSERT INTO `cms_autorespondertags` (`Title`, `Tag`, `FieldName`) VALUES
 ('Last Name', '[LastName]', 'LastName'),
 ('Mobile', '[Mobile]', 'Mobile'),
 ('Name', '[Name]', 'Name'),
-('Password', '[Password]', 'Password');
+('Password', '[Password]', 'Password'),
+('Token URL', '[TOKEN_URL]', 'TokenUrl');
 
 -- --------------------------------------------------------
 
@@ -197,13 +198,6 @@ CREATE TABLE `gsm_apis` (
   `Status` enum('Enabled','Disabled') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `gsm_apis`
---
-
-INSERT INTO `gsm_apis` (`ID`, `LibraryID`, `ApiType`, `Title`, `Host`, `Username`, `ApiKey`, `CreatedDateTime`, `UpdatedDateTime`, `Status`) VALUES
-(9, 1, 'Imei', 'unlocknetwork.co.uk', 'http://unlocknetwork.co.uk/', 'demo', 'xxxx-xxxx-xxx-xxx', '2015-12-04 15:12:22', '2017-01-14 19:28:12', 'Enabled');
-
 -- --------------------------------------------------------
 
 --
@@ -238,6 +232,7 @@ CREATE TABLE `gsm_brands` (
   `Status` enum('Disabled','Enabled') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+
 -- --------------------------------------------------------
 
 --
@@ -253,7 +248,6 @@ CREATE TABLE `gsm_credits` (
   `Amount` float(10,2) DEFAULT NULL,
   `CreatedDateTime` datetime DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
 --
 -- Triggers `gsm_credits`
 --
@@ -289,7 +283,7 @@ CREATE TABLE `gsm_credits_bak` (
   `CreatedDateTime` datetime NOT NULL,
   `Operation` tinyint(1) NOT NULL COMMENT 'delete=0, update=1',
   `OperationDateTime` datetime NOT NULL
-) ENGINE=ARCHIVE DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -376,13 +370,6 @@ CREATE TABLE `gsm_fileservices_orders` (
   `UpdatedDateTime` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `gsm_fileservices_orders`
---
-
-INSERT INTO `gsm_fileservices_orders` (`ID`, `MemberID`, `FileServiceID`, `IMEI`, `ReferenceID`, `Code`, `Email`, `FileName`, `Mobile`, `Note`, `Comments`, `Status`, `CreatedDateTime`, `UpdatedDateTime`) VALUES
-(1, 2, 1, '101222', NULL, NULL, 'usman@gsmworkshop.com', '101222.sha', '45456464645', 'test test test', '', 'Canceled', '2015-12-30 10:03:44', '2016-02-17 23:39:37');
-
 -- --------------------------------------------------------
 
 --
@@ -396,7 +383,7 @@ CREATE TABLE `gsm_imei_orders` (
   `Maker` varchar(255) DEFAULT NULL,
   `Model` varchar(255) DEFAULT NULL,
   `IMEI` varchar(16) DEFAULT NULL,
-  `Code` varchar(50) DEFAULT NULL,
+  `Code` varchar(512) DEFAULT NULL,
   `Email` varchar(255) DEFAULT NULL,
   `MobileNo` varchar(50) DEFAULT NULL,
   `ModelID` int(11) UNSIGNED DEFAULT NULL,
@@ -481,13 +468,6 @@ CREATE TABLE `gsm_members` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `gsm_members`
---
-
-INSERT INTO `gsm_members` (`ID`, `MemberGroupID`, `FirstName`, `LastName`, `Email`, `Password`, `Mobile`, `Token`, `CreatedDateTime`, `UpdatedDateTime`, `Status`) VALUES
-(2, 1, 'demo', 'LOGIN', 'demo@demo.com', '6e9bece1914809fb8493146417e722f6', '+447973471519', '2-45244', '2013-08-03 12:48:20', '2016-04-17 23:53:11', 'Enabled');
-
---
 -- Triggers `gsm_members`
 --
 DELIMITER $$
@@ -563,7 +543,12 @@ CREATE TABLE `gsm_member_fileservices` (
 --
 
 INSERT INTO `gsm_member_fileservices` (`MemberID`, `FileServiceID`, `Price`) VALUES
-(2, 1, 10.41);
+(19, 1, 10.52),
+(27, 1, 10.52),
+(28, 1, 10.52),
+(29, 1, 10.52),
+(30, 1, 10.52),
+(31, 1, 10.52);
 
 -- --------------------------------------------------------
 
@@ -584,7 +569,7 @@ CREATE TABLE `gsm_member_groups` (
 --
 
 INSERT INTO `gsm_member_groups` (`ID`, `Title`, `Discount`, `CreatedDateTime`, `UpdatedDateTime`) VALUES
-(1, 'Default Group', 1, '2013-08-03 12:34:13', '2015-12-22 07:36:25');
+(1, 'Default Group', 0, '2013-08-03 12:34:13', '2018-03-19 22:58:43');
 
 --
 -- Triggers `gsm_member_groups`
@@ -739,29 +724,6 @@ CREATE TABLE `gsm_networks` (
   `UpdatedDateTime` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `gsm_networks`
---
-
-INSERT INTO `gsm_networks` (`ID`, `Title`, `CreatedDateTime`, `UpdatedDateTime`) VALUES
-(1, 'IPHONE FACTORY UNLOCKING (EUROPE & WW)', '2016-02-15 16:54:51', '2016-02-15 16:54:51'),
-(2, '1A:SONY XPERIA WORLDWIDE & UK NET', '2016-02-15 16:54:51', '2016-02-15 16:54:51'),
-(3, '5:IPHONE WORKING IMEI SECTION ALL MODELS UK', '2016-02-15 16:54:51', '2016-02-15 16:54:51'),
-(4, '3:SAMSUNG UK & WORLDWIDE', '2016-02-15 16:54:51', '2016-02-15 16:54:51'),
-(5, '2:BLACKBERRY Z10/Z30/Q5/Q10/ (MASTER UNLOCK CODE)', '2016-02-15 16:54:51', '2016-02-15 16:54:51'),
-(6, '2A:NOKIA LUMIA  UK NETWORKS (MASTER UNLOCK CODE)', '2016-02-15 16:54:51', '2016-02-15 16:54:51'),
-(7, '4:EMEA NETWORKS', '2016-02-15 16:54:51', '2016-02-15 16:54:51'),
-(8, '5A:IPHONE SUPER ( EXCLUSIVE SERVICE )', '2016-02-15 16:54:51', '2016-02-15 16:54:51'),
-(9, '1:FACTORY CODES ( NON BOX/DONGLE CODES)', '2016-02-15 16:54:51', '2016-02-15 16:54:51'),
-(10, '3A:SAMSUNG USA  2014 ******** ', '2016-02-15 16:54:51', '2016-02-15 16:54:51'),
-(11, '2B:NOKIA SL3 (20 Digits) & Generic CODES', '2016-02-15 16:54:51', '2016-02-15 16:54:51'),
-(12, 'A:FIND MY IPHONE ON/OFF ( CHECKER )', '2016-02-15 16:54:51', '2016-02-15 16:54:51'),
-(13, '1AAA: ALL>LUMIA/NOKIA/BLACKBERRY/SAMSUNG/XPERIA', '2016-02-15 16:54:51', '2016-02-15 16:54:51'),
-(14, '1AA: IPAD UK NETWORKS', '2016-02-15 16:54:51', '2016-02-15 16:54:51'),
-(15, '6: IRELAND NETWORKS', '2016-02-15 16:54:51', '2016-02-15 16:54:51'),
-(16, '1AAAA:ALCATEL WORLDWIDE', '2016-02-15 16:54:51', '2016-02-15 16:54:51'),
-(17, '1AA: VODAFONE UK SMART MODELS', '2016-02-15 16:54:51', '2016-02-15 16:54:51');
-
 -- --------------------------------------------------------
 
 --
@@ -783,7 +745,7 @@ CREATE TABLE `gsm_payment` (
 --
 
 INSERT INTO `gsm_payment` (`ID`, `Type`, `UserName`, `Password`, `Signature`, `percent`, `Currency`) VALUES
-(1, 'Paypal', 'areeb-facilitator_api1.ibussolutions.com', '1400332442', 'AO31O9i9zyx5x4ZkvhJjBKGVWKkKA5SONKlX5GIBRUAow90i7PrttIQq', 5, 'GBP');
+(1, 'Paypal', 'paypal_api1.abc.com', 'password', 'signature', 5, 'USD');
 
 -- --------------------------------------------------------
 
@@ -818,13 +780,6 @@ CREATE TABLE `gsm_suppliers` (
   `Status` enum('Enabled','Disabled') DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `gsm_suppliers`
---
-
-INSERT INTO `gsm_suppliers` (`ID`, `FirstName`, `LastName`, `Email`, `Password`, `Mobile`, `CreatedDateTime`, `UpdatedDateTime`, `Status`) VALUES
-(5, 'areeb', 'iqbal', 'shariq@ibussolutions.com', '40be4e59b9a2a2b5dffb918c0e86b3d7', '033212312323', '2014-05-25 17:40:50', '2014-05-25 17:40:50', 'Enabled');
-
 -- --------------------------------------------------------
 
 --
@@ -838,16 +793,6 @@ CREATE TABLE `gsm_supplier_methods` (
   `Price` float DEFAULT NULL,
   `Status` enum('Enabled','Disabled') DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `gsm_supplier_methods`
---
-
-INSERT INTO `gsm_supplier_methods` (`ID`, `SupplierID`, `MethodID`, `Price`, `Status`) VALUES
-(15, 5, 2, 2, 'Enabled'),
-(14, 5, 3, 3, 'Enabled'),
-(13, 5, 5, 6, 'Enabled'),
-(16, 5, 6, 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -873,7 +818,7 @@ CREATE TABLE `hr_employees` (
 --
 
 INSERT INTO `hr_employees` (`ID`, `FirstName`, `LastName`, `Email`, `Password`, `Token`, `CreatedDateTime`, `UpdatedDateTime`, `IsAdmin`, `Status`) VALUES
-(1, 'Muhammad', 'shariq', 'admin@exclusiveunlock.co.uk', '6e9bece1914809fb8493146417e722f6', '', '2013-05-31 15:08:36', '2016-01-06 00:18:27', 'Yes', 'Enabled');
+(1, 'Admin', 'Admin', 'admin@exclusiveunlock.co.uk', '6e9bece1914809fb8493146417e722f6', '', '2013-05-31 15:08:36', '2018-02-20 05:59:38', 'Yes', 'Enabled'),
 
 -- --------------------------------------------------------
 
@@ -1056,6 +1001,8 @@ ALTER TABLE `gsm_logsncredit_orders`
 --
 ALTER TABLE `gsm_members`
   ADD PRIMARY KEY (`ID`),
+  ADD UNIQUE KEY `Token` (`Token`),
+  ADD UNIQUE KEY `Email` (`Email`),
   ADD KEY `MemberGroupID` (`MemberGroupID`);
 
 --
@@ -1175,7 +1122,7 @@ ALTER TABLE `cms_pages`
 -- AUTO_INCREMENT for table `gsm_apis`
 --
 ALTER TABLE `gsm_apis`
-  MODIFY `ID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `ID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `gsm_api_libraries`
 --
@@ -1185,17 +1132,17 @@ ALTER TABLE `gsm_api_libraries`
 -- AUTO_INCREMENT for table `gsm_brands`
 --
 ALTER TABLE `gsm_brands`
-  MODIFY `BrandID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `BrandID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `gsm_credits`
 --
 ALTER TABLE `gsm_credits`
-  MODIFY `ID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `ID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=173;
 --
 -- AUTO_INCREMENT for table `gsm_credits_bak`
 --
 ALTER TABLE `gsm_credits_bak`
-  MODIFY `RowNum` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `RowNum` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `gsm_fileservices`
 --
@@ -1205,12 +1152,12 @@ ALTER TABLE `gsm_fileservices`
 -- AUTO_INCREMENT for table `gsm_fileservices_orders`
 --
 ALTER TABLE `gsm_fileservices_orders`
-  MODIFY `ID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `gsm_imei_orders`
 --
 ALTER TABLE `gsm_imei_orders`
-  MODIFY `ID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
 --
 -- AUTO_INCREMENT for table `gsm_logsncredits`
 --
@@ -1225,7 +1172,7 @@ ALTER TABLE `gsm_logsncredit_orders`
 -- AUTO_INCREMENT for table `gsm_members`
 --
 ALTER TABLE `gsm_members`
-  MODIFY `ID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 --
 -- AUTO_INCREMENT for table `gsm_member_groups`
 --
@@ -1240,7 +1187,7 @@ ALTER TABLE `gsm_mep`
 -- AUTO_INCREMENT for table `gsm_methods`
 --
 ALTER TABLE `gsm_methods`
-  MODIFY `ID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+  MODIFY `ID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 --
 -- AUTO_INCREMENT for table `gsm_models`
 --
@@ -1250,7 +1197,7 @@ ALTER TABLE `gsm_models`
 -- AUTO_INCREMENT for table `gsm_networks`
 --
 ALTER TABLE `gsm_networks`
-  MODIFY `ID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `ID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `gsm_payment`
 --
@@ -1275,7 +1222,7 @@ ALTER TABLE `gsm_supplier_methods`
 -- AUTO_INCREMENT for table `hr_employees`
 --
 ALTER TABLE `hr_employees`
-  MODIFY `ID` mediumint(7) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` mediumint(7) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `hr_modules`
 --

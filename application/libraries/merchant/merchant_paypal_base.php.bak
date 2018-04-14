@@ -93,7 +93,6 @@ abstract class Merchant_paypal_base extends Merchant_driver
 		$request[$prefix.'AMT'] = $this->amount_dollars();
 		$request[$prefix.'CURRENCYCODE'] = $this->param('currency');
 		$request[$prefix.'DESC'] = $this->param('description');
-		$request[$prefix.'NAME'] = $this->param('name');
 	}
 
 	/**

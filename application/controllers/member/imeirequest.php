@@ -143,9 +143,8 @@ class imeirequest extends FSD_Controller
 		
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('MethodID' , 'Method' ,'required');
-		$this->form_validation->set_rules('IMEI' , 'IMEI' ,'required|callback_imei_check');
-		$this->form_validation->set_rules('Email' , 'Email' ,'required|valid_email');
-		$this->form_validation->set_rules('MobileNo' , 'Mobile No' ,'numeric');
+		$this->form_validation->set_rules('IMEI' , 'IMEI' ,'trim|required|callback_imei_check');
+		$this->form_validation->set_rules('Email' , 'Email' ,'valid_email');
 		if($this->form_validation->run() === FALSE)	
 		{
 			$this->index();	
@@ -160,7 +159,7 @@ class imeirequest extends FSD_Controller
 			$price = $pricing[0]['Price'];
 			
 			#### Get IMEI CODES,Count Requests For Orders check Credit
-			$imei_data = explode(PHP_EOL, $data['IMEI']);		
+			$imei_data = explode(PHP_EOL, $data['IMEI']);			
 			$total_price = count($imei_data) * $price;
 
 			if($total_price > $credit[0]['credit'] )
@@ -177,7 +176,6 @@ class imeirequest extends FSD_Controller
 				$insert['IMEI'] = $val;
 				$insert['Email'] = $data['Email'];
 
-				$insert['MobileNo'] = $data['MobileNo'];
 				$insert['MemberID'] = $member_id;
 				$insert['Maker'] = array_key_exists("Maker", $data)? $data['Maker']: NULL;
 				$insert['Model'] = array_key_exists("Model", $data)? $data['Model']: NULL;				
@@ -241,11 +239,12 @@ class imeirequest extends FSD_Controller
 	/* IMEI Validation */
 	public function imei_check($str)
 	{
-		$imeis = explode(PHP_EOL, $str);
+		$imeis = explode(PHP_EOL, $str);		
 		$imeis = array_unique($imeis);
+		
 		foreach($imeis as $imei)
-		{    		
-			if( !$this->is_imei($imei) ) 
+		{	
+			if( is_numeric($imei) && TRUE !== $this->is_imei($imei) ) 
 			{
 				$this->form_validation->set_message('imei_check', 'One or more IMEI(s) are invalid.');
 				return FALSE;
@@ -283,5 +282,5 @@ class imeirequest extends FSD_Controller
 		$sum = array_sum($log) * 9;
 		// Compare the last digit with $imei_last
 		return substr($sum, -1) == $imei_last;
-	}	
+	}
 }
