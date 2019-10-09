@@ -818,7 +818,7 @@ CREATE TABLE `hr_employees` (
 --
 
 INSERT INTO `hr_employees` (`ID`, `FirstName`, `LastName`, `Email`, `Password`, `Token`, `CreatedDateTime`, `UpdatedDateTime`, `IsAdmin`, `Status`) VALUES
-(1, 'Admin', 'Admin', 'admin@exclusiveunlock.co.uk', '6e9bece1914809fb8493146417e722f6', '', '2013-05-31 15:08:36', '2018-02-20 05:59:38', 'Yes', 'Enabled'),
+(1, 'Admin', 'Admin', 'admin@exclusiveunlock.co.uk', '6e9bece1914809fb8493146417e722f6', '', '2013-05-31 15:08:36', '2018-02-20 05:59:38', 'Yes', 'Enabled');
 
 -- --------------------------------------------------------
 
