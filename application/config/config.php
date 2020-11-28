@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']						= 	'http://localhost:8000/';
+$config['base_url']						= 	'http://localhost/exclusiveunlock/';
 $config['assets_url']					= 	$config['base_url'].'assets/';
 $config['page_url']						= 	$config['base_url'].'uploads/cms/pages/';
 $config['page_thumb_url']				= 	$config['base_url'].'uploads/cms/pages/thumbs/';
